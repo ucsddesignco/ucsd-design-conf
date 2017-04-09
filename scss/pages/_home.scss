@@ -1,0 +1,118 @@
+.dc-hero {
+  background: url('../images/background.png') no-repeat center center;
+  height: 80%;
+  height: 80vh;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  h1 {
+    font-size: 48px;
+  }
+  &--content {
+    position: relative;
+    top: -40px;
+  }
+  &--description {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    h4 {
+      line-height: 1.5;
+    }
+  }
+}
+.dc-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &--header {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+  &--button {
+    margin-top: 60px;
+  }
+}
+.dc-card {
+  border: 5px solid $GRAY_1;
+  box-shadow: 0 10px 20px $SHADOW_COLOR;
+  border-radius: 25px;
+  padding: 36px 20px;
+  background-color: $BACKGROUND_COLOR;
+
+  &--img {
+    margin-bottom: 20px;
+  }
+  &--body {
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+}
+.dc-schedule {
+  margin-bottom: 20px;
+
+  h4 {
+    margin: 20px 0;
+  }
+  p {
+    line-height: 24px;
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+
+    &:before {
+      // content: ' ';
+      // width: 6px;
+      // height: 30px;
+      // background-color: $GRAY_1;
+      // position: absolute;
+      // border-radius: 3px;
+      // left: 10px;
+      // top: 0;
+    }
+  }
+}
+.dc-faq {
+  &--section {
+    margin-bottom: 40px;
+
+    h4 {
+      margin: 24px 0;
+    }
+  }
+  &--text {
+    line-height: 24px;
+    position: relative;
+    padding-left: 55px;
+
+    &:before {
+      content: ' ';
+      width: 6px;
+      height: 50px;
+      background-color: $GRAY_1;
+      position: absolute;
+      border-radius: 3px;
+      left: 30px;
+      top: 0;
+    }
+  }
+}
+.dc-featurette {
+
+  &--left,
+  &--right {
+    position: absolute;
+    z-index: -1;
+    top: -40%;
+  }
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+  }
+}
