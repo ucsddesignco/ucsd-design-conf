@@ -1,18 +1,15 @@
 .dc-hero {
-  background: url('../images/background.png') no-repeat center center;
+  // background: url('../images/background.png') no-repeat center center;
   height: 80%;
   height: 80vh;
   max-height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 
   h1 {
     font-size: 48px;
-  }
-  &--content {
-    position: relative;
-    top: -40px;
   }
   &--description {
     margin-top: 40px;
@@ -21,6 +18,17 @@
     h4 {
       line-height: 1.5;
     }
+  }
+  &--bg {
+    // Mobile styles (shove image to right)
+    // @media screen and (max-width)
+    img {
+      width: 100%;
+    }
+  }
+  &--content-wrapper {
+    position: absolute;
+    width: 100%;
   }
 }
 .dc-section {
@@ -35,6 +43,20 @@
   &--button {
     margin-top: 60px;
   }
+  &--bottom {
+
+  }
+  &--bottom-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 .dc-card {
   border: 5px solid $GRAY_1;
@@ -42,6 +64,7 @@
   border-radius: 25px;
   padding: 36px 20px;
   background-color: $BACKGROUND_COLOR;
+  margin-bottom: 30px;
 
   &--img {
     margin-bottom: 20px;
@@ -102,7 +125,6 @@
   }
 }
 .dc-featurette {
-
   &--left,
   &--right {
     position: absolute;
@@ -114,5 +136,54 @@
   }
   &--right {
     right: 0;
+  }
+}
+.dc-cta {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+
+  img {
+    width: 100%;
+  }
+}
+.dc-footer {
+  // background-color: $GRAY_2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 40px;
+
+  #logo-dsp {
+    width: 100px;
+    vertical-align: middle;
+    height: 100px;
+  }
+  #logo-designatucsd {
+    vertical-align: middle;
+    margin-right: 20px;
+    width: 200px;
+  }
+  &--presented h4 {
+    margin-bottom: 20px;
+  }
+}
+.dc-btn {
+  padding: 15px 50px;
+  border-radius: 12px;
+  background-color: $PINK_1;
+  color: $WHITE;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 50px $PINK_SHADOW;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    background-color: $PINK_1 !important;
+    box-shadow: 0 10px 50px $PINK_SHADOW;
   }
 }
