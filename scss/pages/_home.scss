@@ -187,9 +187,9 @@
   height: 80%;
   height: 80vh;
   max-height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
   position: relative;
   top: -80px;
   margin: 0;
@@ -248,10 +248,7 @@
   &--content-wrapper {
     position: absolute;
     width: 100%;
-
-    @media screen and (max-width: $BP_MD) {
-      padding-top: 100px;
-    }
+    padding-top: 100px;
   }
 }
 
