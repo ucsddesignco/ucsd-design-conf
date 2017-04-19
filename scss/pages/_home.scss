@@ -65,7 +65,7 @@
     }
     &:after {
       background: inherit;
-      top: 70%;
+      top: 62%;
       content: '';
       display: block;
       height: 100%;
@@ -79,7 +79,7 @@
         width: 100%;
       }
       @media screen and (max-width: $BP_MD) {
-        top: 90%;
+        top: 80%;
         right: -200px;
       }
       @media screen and (min-width: $BP_XXL) {
@@ -371,8 +371,11 @@
   &:focus,
   &:active,
   &:visited {
-    background-color: $ORANGE_1 !important;
+    background-color: $ORANGE_1;
     box-shadow: 0px 4px 20px $PINK_SHADOW;
+  }
+  &:hover {
+    background-color: lighten($ORANGE_1, 5%);
   }
 }
 
