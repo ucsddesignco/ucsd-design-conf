@@ -187,14 +187,14 @@
   height: 80%;
   height: 80vh;
   max-height: 800px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-around;
   position: relative;
   margin: 0;
   margin-bottom: 100px;
   padding-top: 100px;
 
+  @media screen and (max-width: $BP_MD) {
+    padding-top: 10px;
+  }
   &:after {
     content: '';
     display: block;
@@ -214,7 +214,6 @@
       height: 1200px;
     }
   }
-  
   h1 {
     font-size: 48px;
   }
@@ -228,9 +227,6 @@
   }
   &--bg {
     // Mobile styles (shove image to right)
-    // @media screen and (max-width)
-    // overflow-x: hidden;
-    // height: 100%;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -414,4 +410,8 @@
   margin-bottom: 60px;
   height: 50px;
   width: 100px;
+
+  @media screen and (max-width: $BP_MD) {
+    margin-bottom: 30px;
+  }
 }
