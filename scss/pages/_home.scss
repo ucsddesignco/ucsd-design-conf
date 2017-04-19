@@ -80,7 +80,7 @@
       }
       @media screen and (max-width: $BP_MD) {
         top: 80%;
-        right: -200px;
+        background-position: 80% 60px;
       }
       @media screen and (min-width: $BP_XXL) {
         background-size: cover;
@@ -165,7 +165,6 @@
       z-index: -1;
       content: '';
       display: block;
-      // left: 0;
       right: 0;
       width: $FOOTER_WIDTH;
 
@@ -215,8 +214,7 @@
       height: 1200px;
     }
   }
-
-
+  
   h1 {
     font-size: 48px;
   }
@@ -250,6 +248,10 @@
   &--content-wrapper {
     position: absolute;
     width: 100%;
+
+    @media screen and (max-width: $BP_MD) {
+      padding-top: 100px;
+    }
   }
 }
 
