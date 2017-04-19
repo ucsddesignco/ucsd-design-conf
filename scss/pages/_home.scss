@@ -1,8 +1,11 @@
 .dc-section {
   position: relative;
   margin-top: 200px;
-  margin-bottom: 200px;
 
+  &>div {
+    // position: relative;
+    // top: -200px;
+  }
   &--header {
     font-size: 42px;
     margin-bottom: 50px;
@@ -35,32 +38,30 @@
       z-index: 1;
     }
     &:before {
-      background: inherit;
-      top: 0;
+      background: url('../images/triangle_green_top.png') no-repeat 0 0;
+      background-size: initial;
+      top: -600px;
       content: '';
       display: block;
       height: 100%;
       left: 0;
       position: absolute;
       right: 0;
-      transform: skewY(-30deg);
-      transform-origin: 20%;
+      transform: scale(1.2);
       z-index: -1;
-      box-shadow: 0 -400px 0 $WHITE;
     }
     &:after {
       background: inherit;
-      bottom: 0;
+      top: 80%;
       content: '';
       display: block;
       height: 100%;
       left: 0;
+      background: url('../images/triangle_green_bottom.png') no-repeat 100% 0;
       position: absolute;
       right: 0;
-      transform: skewY(-30deg);
-      transform-origin: 69%;
+      transform: scale(1.2);
       z-index: -1;  
-      box-shadow: 0 400px 0 $WHITE;
     }
   }
   &--blue {
@@ -74,6 +75,15 @@
   }
   &--yellow {
     background: $YELLOW_1;
+
+    &:before {
+      background: url('../images/triangle_yellow_top.png') no-repeat 0 0;
+      background-size: initial;
+    }
+    &:after {
+      background: url('../images/triangle_yellow_bottom.png') no-repeat 100% 0;
+      background-size: initial;
+    }
   }
   &--orange {
     background: $ORANGE_1;
@@ -91,6 +101,7 @@
   justify-content: space-around;
   position: relative;
   margin: 0;
+  margin-bottom: 100px;
 
   h1 {
     font-size: 48px;
@@ -111,7 +122,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: -80px;
 
     img {
       width: auto;
@@ -143,7 +154,6 @@
 }
 
 .dc-schedule {
-  margin-bottom: 20px;
 
   h4 {
     margin: 20px 0;
