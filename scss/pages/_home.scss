@@ -3,9 +3,8 @@
   margin-top: 100px;
   padding-top: 100px;
 
-  &>div {
-    // position: relative;
-    // top: -200px;
+  @media screen and (min-width: $BP_XXL) {
+    padding-top: 300px;
   }
   &--header {
     font-size: 42px;
@@ -49,20 +48,24 @@
       left: 0;
       position: absolute;
       right: 0;
-      transform: scale(1.2);
       z-index: -1;
 
       @media screen and (min-width: $BP_XL) {
         background-size: cover !important;
       }
       @media screen and (max-width: $BP_MD) {
-        top: -800px;
+        top: -650px;
         left: -100px;
+      }
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: 1200px;
+
       }
     }
     &:after {
       background: inherit;
-      top: 80%;
+      top: 70%;
       content: '';
       display: block;
       height: 100%;
@@ -70,15 +73,18 @@
       background: url('../images/triangle_green_bottom.png') no-repeat 100% 0;
       position: absolute;
       right: 0;
-      transform: scale(1.2);
       z-index: -1;  
 
       @media screen and (min-width: $BP_XL) {
-        background-size: cover !important;
+        width: 100%;
       }
       @media screen and (max-width: $BP_MD) {
         top: 90%;
         right: -200px;
+      }
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: 1200px;
       }
     }
   }
@@ -88,6 +94,11 @@
     &:before {
       background: url('../images/triangle_blue_top.png') no-repeat 0 0;
       background-size: initial;
+
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: 1200px;
+      }
     }
     &:after {
       background: url('../images/triangle_blue_bottom_special.png') no-repeat 100% 0;
@@ -95,8 +106,15 @@
       height: 872px;
       top: 85%;
 
+      @media screen and (max-width: $BP_LG) {
+        background-position: -200px 0;
+      }
       @media screen and (max-width: $BP_MD) {
-        background: url('../images/triangle_blue_bottom.png') no-repeat 0 0;
+        background: url('../images/triangle_blue_bottom_nothing.png') no-repeat 0 0;
+      }
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: 1200px;
       }
     }
   }
@@ -154,13 +172,19 @@
       @media screen and (max-width: $BP_MD) {
         background-position: 200px 0;
       }
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: $FOOTER_WIDTH * .605 * 1.2;
+        width: $FOOTER_WIDTH * 1.2;
+      }
+    }
+    @media screen and (max-width: $BP_MD) {
+      margin-top: 0;
     }
   }
 }
 
 .dc-hero {
-  // background: url('../images/background.png') no-repeat 0 center;
-  background-size: cover;
   height: 80%;
   height: 80vh;
   max-height: 800px;
@@ -168,8 +192,30 @@
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  top: -80px;
   margin: 0;
   margin-bottom: 100px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 996px;
+    background: url('../images/background.png') no-repeat 0 center;
+    z-index: -1;
+
+    @media screen and (max-width: $BP_LG) {
+      left: -100px;
+    }
+    @media screen and (min-width: $BP_XXL) {
+      background-size: cover;
+      height: 1200px;
+    }
+  }
+
 
   h1 {
     font-size: 48px;
@@ -196,6 +242,10 @@
       width: auto;
       min-width: 100%;
     }
+    @media screen and (max-width: $BP_MD) {
+      left: -200px;
+      top: 0;
+    }
   }
   &--content-wrapper {
     position: absolute;
@@ -204,11 +254,9 @@
 }
 
 .dc-card {
-  // border: 5px solid $GRAY_1;
-  box-shadow: 0 10px 20px $SHADOW_COLOR;
   border-radius: 25px;
   padding: 36px 20px;
-  background-color: $BACKGROUND_COLOR;
+  background: #FFF;
   margin-bottom: 30px;
 
   &--img {
@@ -230,17 +278,6 @@
     position: relative;
     padding-left: 30px;
     font-size: 16px;
-
-    &:before {
-      // content: ' ';
-      // width: 6px;
-      // height: 30px;
-      // background-color: $GRAY_1;
-      // position: absolute;
-      // border-radius: 3px;
-      // left: 10px;
-      // top: 0;
-    }
   }
 }
 
@@ -295,11 +332,12 @@
 .dc-cta {
   margin-top: 100px;
 
+  @media screen and (min-width: $BP_XXL) {
+    margin-top: -100px !important;
+  }
 }
 
 .dc-footer {
-  // background-color: $GRAY_2;
-  // position: absolute;
   bottom: 0;
   width: 100%;
   padding-bottom: 40px;
@@ -367,4 +405,16 @@
   @media screen and (max-width: $BP_MD) {
     text-align: center;
   }
+}
+
+.dc-mobile-text-left {
+  @media screen and (max-width: $BP_MD) {
+    text-align: left;
+  }
+}
+
+.dc-logo {
+  margin-bottom: 60px;
+  height: 50px;
+  width: 100px;
 }
