@@ -2,22 +2,60 @@
 
 /* Fonts */
   // Font imports
-  @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+  @import url('https://fonts.googleapis.com/css?family=Varela+Round|Lato');
 
-  $HEADER_FONT: "Varela Round", Helvetica, sans-serif;
+  $HEADER_FONT: "Lato", Helvetica, sans-serif;
   $TEXT_FONT: "Varela Round", Helvetica, sans-serif;
 
 /* Colors */
-  $GRAY_1: #5C5C5C;
+  $GRAY_1: #484848;
 
   $GRAY_2: #DEDEDE;
 
   $PINK_1: #FF2682;
 
-  $PINK_SHADOW: rgba(255, 61, 131, .43);
+  /* Document colors */
+  $ORANGE_1: #F05C4C;
 
-  $WHITE: #FFFFFF;
+  $BLUE_1: #65A2B8;
+
+  $GREEN_1: #81B25B;
+
+  $RED_1: #E51A42;
+
+  $YELLOW_1: #FFD059;
+
+
+  $PINK_SHADOW: rgba(0, 0, 0, .25);
+
+  $WHITE: #FAFAFA;
 
   $SHADOW_COLOR: rgba(0, 0, 0, .29);
 
   $BACKGROUND_COLOR: #FAFAFA;
+
+/* Breakpoints */
+  // Note breakpoints are the upper bound of each device size
+  // Usage: @media screen and (max-width: $BP_WHATEVER) { }
+
+  /* Bootstrap 6 default breakpoints 
+   * $breakpoints: (
+   *   small: 0px,
+   *   medium: 640px,
+   *   large: 1024px,
+   *   xlarge: 1200px,
+   *   xxlarge: 1440px,
+   * );
+   */
+
+  // Small mobile device
+  $BP_SM: 640px;
+
+  // Mobile device width upper bound
+  $BP_MD: 768px;
+  
+  // Tablet width upper bound
+  $BP_LG: 992px;
+
+  // Small desktop width upper bound (ie laptops)
+  $BP_XL: 1200px;

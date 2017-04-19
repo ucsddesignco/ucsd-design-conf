@@ -25,6 +25,9 @@
   ol, ul {
     list-style: none;
   }
+  h1, h2 {
+    font-family: $HEADER_FONT;
+  }
   blockquote, q {
     quotes: none;
   }

@@ -1,5 +1,166 @@
+.dc-section {
+  position: relative;
+  margin-top: 100px;
+  padding-top: 100px;
+
+  &>div {
+    // position: relative;
+    // top: -200px;
+  }
+  &--header {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+  &--button {
+    margin-top: 60px;
+  }
+  &--bottom {
+    position: relative;
+    top: -100px;
+  }
+  &--bottom-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    img {
+    }
+  }
+  &--blue,
+  &--red,
+  &--red,
+  &--yellow,
+  &--green,
+  &--orange {
+    z-index: -2;
+
+    &>div {
+      z-index: 1;
+    }
+    &:before {
+      background: url('../images/triangle_green_top.png') no-repeat 0 0;
+      background-size: initial;
+      top: -600px;
+      content: '';
+      display: block;
+      height: 871px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transform: scale(1.2);
+      z-index: -1;
+
+      @media screen and (min-width: $BP_XL) {
+        background-size: cover !important;
+      }
+      @media screen and (max-width: $BP_MD) {
+        top: -800px;
+        left: -100px;
+      }
+    }
+    &:after {
+      background: inherit;
+      top: 80%;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      background: url('../images/triangle_green_bottom.png') no-repeat 100% 0;
+      position: absolute;
+      right: 0;
+      transform: scale(1.2);
+      z-index: -1;  
+
+      @media screen and (min-width: $BP_XL) {
+        background-size: cover !important;
+      }
+      @media screen and (max-width: $BP_MD) {
+        top: 90%;
+        right: -200px;
+      }
+    }
+  }
+  &--blue {
+    background: $BLUE_1;
+
+    &:before {
+      background: url('../images/triangle_blue_top.png') no-repeat 0 0;
+      background-size: initial;
+    }
+    &:after {
+      background: url('../images/triangle_blue_bottom_special.png') no-repeat 100% 0;
+      background-size: initial;
+      height: 872px;
+      top: 85%;
+
+      @media screen and (max-width: $BP_MD) {
+        background: url('../images/triangle_blue_bottom.png') no-repeat 0 0;
+      }
+    }
+  }
+  &--red {
+    background: $RED_1;
+  }
+  &--green {
+    background: $GREEN_1;
+  }
+  &--yellow {
+    background: $YELLOW_1;
+
+    &:before {
+      background: url('../images/triangle_yellow_top.png') no-repeat 0 0;
+      background-size: initial;
+    }
+    &:after {
+      background: url('../images/triangle_yellow_bottom.png') no-repeat 100% 0;
+      background-size: initial;
+      top: 60%;
+    }
+  }
+  &--orange {
+    background: $ORANGE_1;
+  }
+  &--no-after {
+    &:after {
+      content: none;
+    }
+  }
+  &--no-before {
+    &:before {
+      content: none;
+    }
+  }
+  &--footer {
+    margin-top: 100px;
+    position: relative;
+
+    $FOOTER_WIDTH: 900px;
+
+    &:before {
+      background: url('../images/triangle_yellow_footer.png') no-repeat 0 0;
+      background-size: initial;
+      position: absolute;
+      bottom: 0;
+      height: $FOOTER_WIDTH * .605;
+      z-index: -1;
+      content: '';
+      display: block;
+      // left: 0;
+      right: 0;
+      width: $FOOTER_WIDTH;
+
+      @media screen and (max-width: $BP_MD) {
+        background-position: 200px 0;
+      }
+    }
+  }
+}
+
 .dc-hero {
-  // background: url('../images/background.png') no-repeat center center;
+  // background: url('../images/background.png') no-repeat 0 center;
+  background-size: cover;
   height: 80%;
   height: 80vh;
   max-height: 800px;
@@ -7,6 +168,8 @@
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  margin: 0;
+  margin-bottom: 100px;
 
   h1 {
     font-size: 48px;
@@ -22,8 +185,16 @@
   &--bg {
     // Mobile styles (shove image to right)
     // @media screen and (max-width)
+    // overflow-x: hidden;
+    // height: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -80px;
+
     img {
-      width: 100%;
+      width: auto;
+      min-width: 100%;
     }
   }
   &--content-wrapper {
@@ -31,35 +202,9 @@
     width: 100%;
   }
 }
-.dc-section {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
 
-  &--header {
-    font-size: 42px;
-    margin-bottom: 50px;
-  }
-  &--button {
-    margin-top: 60px;
-  }
-  &--bottom {
-
-  }
-  &--bottom-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-
-    img {
-      width: 100%;
-    }
-  }
-}
 .dc-card {
-  border: 5px solid $GRAY_1;
+  // border: 5px solid $GRAY_1;
   box-shadow: 0 10px 20px $SHADOW_COLOR;
   border-radius: 25px;
   padding: 36px 20px;
@@ -75,9 +220,8 @@
     }
   }
 }
-.dc-schedule {
-  margin-bottom: 20px;
 
+.dc-schedule {
   h4 {
     margin: 20px 0;
   }
@@ -99,6 +243,7 @@
     }
   }
 }
+
 .dc-faq {
   &--section {
     margin-bottom: 40px;
@@ -124,33 +269,37 @@
     }
   }
 }
+
 .dc-featurette {
+  z-index: -2;
+
   &--left,
   &--right {
     position: absolute;
     z-index: -1;
-    top: -40%;
+    top: -20%;
   }
   &--left {
-    left: 0;
+    left: -60px;
+
+    &.second {
+      top: -37%;
+    }
   }
   &--right {
     right: 0;
+    top: -75%;
   }
 }
-.dc-cta {
-  position: absolute;
-  top: 35%;
-  left: 0;
-  right: 0;
 
-  img {
-    width: 100%;
-  }
+.dc-cta {
+  margin-top: 100px;
+
 }
+
 .dc-footer {
   // background-color: $GRAY_2;
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   width: 100%;
   padding-bottom: 40px;
@@ -169,21 +318,53 @@
     margin-bottom: 20px;
   }
 }
+
 .dc-btn {
   padding: 15px 50px;
   border-radius: 12px;
-  background-color: $PINK_1;
+  background-color: $ORANGE_1;
   color: $WHITE;
   border: none;
   font-size: 18px;
   letter-spacing: 0.5px;
-  box-shadow: 0 10px 50px $PINK_SHADOW;
+  box-shadow: 0px 4px 20px $PINK_SHADOW;
 
   &:hover,
   &:focus,
   &:active,
   &:visited {
-    background-color: $PINK_1 !important;
-    box-shadow: 0 10px 50px $PINK_SHADOW;
+    background-color: $ORANGE_1 !important;
+    box-shadow: 0px 4px 20px $PINK_SHADOW;
+  }
+}
+
+.dc-footer {
+  &--icons {
+    margin-top: 50px;
+    padding: 14px 0;
+    list-style-type: none;
+    z-index: 1;
+    font-size: 24px;
+
+    li {
+      display: inline-block;
+      border: 3px solid $GRAY_1;
+      border-radius: 24px;
+      margin-left: 6px;
+
+      a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.dc-mobile-text-center {
+  @media screen and (max-width: $BP_MD) {
+    text-align: center;
   }
 }
