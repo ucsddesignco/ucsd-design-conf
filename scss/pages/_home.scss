@@ -1,40 +1,7 @@
-.dc-hero {
-  // background: url('../images/background.png') no-repeat center center;
-  height: 80%;
-  height: 80vh;
-  max-height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-
-  h1 {
-    font-size: 48px;
-  }
-  &--description {
-    margin-top: 40px;
-    margin-bottom: 40px;
-
-    h4 {
-      line-height: 1.5;
-    }
-  }
-  &--bg {
-    // Mobile styles (shove image to right)
-    // @media screen and (max-width)
-    img {
-      width: 100%;
-    }
-  }
-  &--content-wrapper {
-    position: absolute;
-    width: 100%;
-  }
-}
 .dc-section {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-top: 200px;
+  margin-bottom: 200px;
 
   &--header {
     font-size: 42px;
@@ -54,10 +21,109 @@
     z-index: -1;
 
     img {
-      width: 100%;
     }
   }
+  &--blue,
+  &--red,
+  &--red,
+  &--yellow,
+  &--green,
+  &--orange {
+    z-index: -2;
+
+    &>div {
+      z-index: 1;
+    }
+    &:before {
+      background: inherit;
+      top: 0;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transform: skewY(-30deg);
+      transform-origin: 20%;
+      z-index: -1;
+      box-shadow: 0 -400px 0 $WHITE;
+    }
+    &:after {
+      background: inherit;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transform: skewY(-30deg);
+      transform-origin: 69%;
+      z-index: -1;  
+      box-shadow: 0 400px 0 $WHITE;
+    }
+  }
+  &--blue {
+    background: $BLUE_1;
+  }
+  &--red {
+    background: $RED_1;
+  }
+  &--green {
+    background: $GREEN_1;
+  }
+  &--yellow {
+    background: $YELLOW_1;
+  }
+  &--orange {
+    background: $ORANGE_1;
+  }
 }
+
+.dc-hero {
+  // background: url('../images/background.png') no-repeat 0 center;
+  background-size: cover;
+  height: 80%;
+  height: 80vh;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  margin: 0;
+
+  h1 {
+    font-size: 48px;
+  }
+  &--description {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    h4 {
+      line-height: 1.5;
+    }
+  }
+  &--bg {
+    // Mobile styles (shove image to right)
+    // @media screen and (max-width)
+    // overflow-x: hidden;
+    // height: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    img {
+      width: auto;
+      min-width: 100%;
+    }
+  }
+  &--content-wrapper {
+    position: absolute;
+    width: 100%;
+  }
+}
+
 .dc-card {
   border: 5px solid $GRAY_1;
   box-shadow: 0 10px 20px $SHADOW_COLOR;
@@ -75,6 +141,7 @@
     }
   }
 }
+
 .dc-schedule {
   margin-bottom: 20px;
 
@@ -124,20 +191,29 @@
     }
   }
 }
+
 .dc-featurette {
+  z-index: -2;
+
   &--left,
   &--right {
     position: absolute;
     z-index: -1;
-    top: -40%;
+    top: -20%;
   }
   &--left {
-    left: 0;
+    left: -60px;
+
+    &.second {
+      top: -37%;
+    }
   }
   &--right {
     right: 0;
+    top: -75%;
   }
 }
+
 .dc-cta {
   position: absolute;
   top: 35%;
@@ -148,6 +224,7 @@
     width: 100%;
   }
 }
+
 .dc-footer {
   // background-color: $GRAY_2;
   position: absolute;
@@ -169,21 +246,22 @@
     margin-bottom: 20px;
   }
 }
+
 .dc-btn {
   padding: 15px 50px;
   border-radius: 12px;
-  background-color: $PINK_1;
+  background-color: $ORANGE_1;
   color: $WHITE;
   border: none;
   font-size: 18px;
   letter-spacing: 0.5px;
-  box-shadow: 0 10px 50px $PINK_SHADOW;
+  box-shadow: 0px 4px 20px $PINK_SHADOW;
 
   &:hover,
   &:focus,
   &:active,
   &:visited {
-    background-color: $PINK_1 !important;
-    box-shadow: 0 10px 50px $PINK_SHADOW;
+    background-color: $ORANGE_1 !important;
+    box-shadow: 0px 4px 20px $PINK_SHADOW;
   }
 }
