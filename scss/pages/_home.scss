@@ -4,11 +4,7 @@
   padding-top: 100px;
 
   @media screen and (min-width: $BP_XXL) {
-    padding-top: 250px;
-  }
-  &>div {
-    // position: relative;
-    // top: -200px;
+    padding-top: 300px;
   }
   &--header {
     font-size: 42px;
@@ -64,11 +60,12 @@
       @media screen and (min-width: $BP_XXL) {
         background-size: cover;
         height: 1200px;
+
       }
     }
     &:after {
       background: inherit;
-      top: 80%;
+      top: 70%;
       content: '';
       display: block;
       height: 100%;
@@ -175,6 +172,11 @@
       @media screen and (max-width: $BP_MD) {
         background-position: 200px 0;
       }
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: $FOOTER_WIDTH * .605 * 1.2;
+        width: $FOOTER_WIDTH * 1.2;
+      }
     }
     @media screen and (max-width: $BP_MD) {
       margin-top: 0;
@@ -190,6 +192,7 @@
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  top: -80px;
   margin: 0;
   margin-bottom: 100px;
 
@@ -251,11 +254,9 @@
 }
 
 .dc-card {
-  // border: 5px solid $GRAY_1;
-  box-shadow: 0 10px 20px $SHADOW_COLOR;
   border-radius: 25px;
   padding: 36px 20px;
-  background-color: $BACKGROUND_COLOR;
+  background: #FFF;
   margin-bottom: 30px;
 
   &--img {
@@ -277,17 +278,6 @@
     position: relative;
     padding-left: 30px;
     font-size: 16px;
-
-    &:before {
-      // content: ' ';
-      // width: 6px;
-      // height: 30px;
-      // background-color: $GRAY_1;
-      // position: absolute;
-      // border-radius: 3px;
-      // left: 10px;
-      // top: 0;
-    }
   }
 }
 
@@ -342,11 +332,12 @@
 .dc-cta {
   margin-top: 100px;
 
+  @media screen and (min-width: $BP_XXL) {
+    margin-top: -100px !important;
+  }
 }
 
 .dc-footer {
-  // background-color: $GRAY_2;
-  // position: absolute;
   bottom: 0;
   width: 100%;
   padding-bottom: 40px;
@@ -420,4 +411,10 @@
   @media screen and (max-width: $BP_MD) {
     text-align: left;
   }
+}
+
+.dc-logo {
+  margin-bottom: 60px;
+  height: 50px;
+  width: 100px;
 }
