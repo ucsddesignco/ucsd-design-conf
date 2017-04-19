@@ -3,6 +3,9 @@
   margin-top: 100px;
   padding-top: 100px;
 
+  @media screen and (min-width: $BP_XXL) {
+    padding-top: 250px;
+  }
   &>div {
     // position: relative;
     // top: -200px;
@@ -55,8 +58,12 @@
         background-size: cover !important;
       }
       @media screen and (max-width: $BP_MD) {
-        top: -800px;
+        top: -650px;
         left: -100px;
+      }
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: 1200px;
       }
     }
     &:after {
@@ -72,11 +79,15 @@
       z-index: -1;  
 
       @media screen and (min-width: $BP_XL) {
-        background-size: cover !important;
+        width: 100%;
       }
       @media screen and (max-width: $BP_MD) {
         top: 90%;
         right: -200px;
+      }
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: 1200px;
       }
     }
   }
@@ -86,6 +97,11 @@
     &:before {
       background: url('../images/triangle_blue_top.png') no-repeat 0 0;
       background-size: initial;
+
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: 1200px;
+      }
     }
     &:after {
       background: url('../images/triangle_blue_bottom_special.png') no-repeat 100% 0;
@@ -93,8 +109,15 @@
       height: 872px;
       top: 85%;
 
+      @media screen and (max-width: $BP_LG) {
+        background-position: -200px 0;
+      }
       @media screen and (max-width: $BP_MD) {
         background: url('../images/triangle_blue_bottom_nothing.png') no-repeat 0 0;
+      }
+      @media screen and (min-width: $BP_XXL) {
+        background-size: cover;
+        height: 1200px;
       }
     }
   }
@@ -153,6 +176,9 @@
         background-position: 200px 0;
       }
     }
+    @media screen and (max-width: $BP_MD) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -177,6 +203,14 @@
     height: 996px;
     background: url('../images/background.png') no-repeat 0 center;
     z-index: -1;
+
+    @media screen and (max-width: $BP_LG) {
+      left: -100px;
+    }
+    @media screen and (min-width: $BP_XXL) {
+      background-size: cover;
+      height: 1200px;
+    }
   }
 
 
