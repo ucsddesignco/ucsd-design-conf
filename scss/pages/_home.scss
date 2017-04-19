@@ -49,7 +49,6 @@
       left: 0;
       position: absolute;
       right: 0;
-      transform: scale(1.2);
       z-index: -1;
 
       @media screen and (min-width: $BP_XL) {
@@ -70,7 +69,6 @@
       background: url('../images/triangle_green_bottom.png') no-repeat 100% 0;
       position: absolute;
       right: 0;
-      transform: scale(1.2);
       z-index: -1;  
 
       @media screen and (min-width: $BP_XL) {
@@ -96,7 +94,7 @@
       top: 85%;
 
       @media screen and (max-width: $BP_MD) {
-        background: url('../images/triangle_blue_bottom.png') no-repeat 0 0;
+        background: url('../images/triangle_blue_bottom_nothing.png') no-repeat 0 0;
       }
     }
   }
@@ -159,8 +157,6 @@
 }
 
 .dc-hero {
-  // background: url('../images/background.png') no-repeat 0 center;
-  background-size: cover;
   height: 80%;
   height: 80vh;
   max-height: 800px;
@@ -170,6 +166,19 @@
   position: relative;
   margin: 0;
   margin-bottom: 100px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 996px;
+    background: url('../images/background.png') no-repeat 0 center;
+    z-index: -1;
+  }
+
 
   h1 {
     font-size: 48px;
@@ -195,6 +204,10 @@
     img {
       width: auto;
       min-width: 100%;
+    }
+    @media screen and (max-width: $BP_MD) {
+      left: -200px;
+      top: 0;
     }
   }
   &--content-wrapper {
@@ -366,5 +379,11 @@
 .dc-mobile-text-center {
   @media screen and (max-width: $BP_MD) {
     text-align: center;
+  }
+}
+
+.dc-mobile-text-left {
+  @media screen and (max-width: $BP_MD) {
+    text-align: left;
   }
 }
