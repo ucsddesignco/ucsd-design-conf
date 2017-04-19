@@ -191,9 +191,9 @@
   // flex-direction: column;
   // justify-content: space-around;
   position: relative;
-  top: -80px;
   margin: 0;
   margin-bottom: 100px;
+  padding-top: 100px;
 
   &:after {
     content: '';
@@ -244,11 +244,6 @@
       left: -200px;
       top: 0;
     }
-  }
-  &--content-wrapper {
-    position: absolute;
-    width: 100%;
-    padding-top: 100px;
   }
 }
 
