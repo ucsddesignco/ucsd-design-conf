@@ -193,7 +193,7 @@
   padding-top: 100px;
 
   @media screen and (max-width: $BP_MD) {
-    padding-top: 10px;
+    padding-top: 20px;
   }
   &:after {
     content: '';
@@ -212,6 +212,9 @@
     @media screen and (min-width: $BP_XXL) {
       background-size: cover;
       height: 1200px;
+    }
+    @media screen and (max-width: $BP_MD) {
+      top: -300px;
     }
   }
   h1 {
