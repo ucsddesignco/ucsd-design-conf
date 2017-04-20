@@ -193,7 +193,7 @@
   padding-top: 100px;
 
   @media screen and (max-width: $BP_MD) {
-    padding-top: 20px;
+    padding-top: 20%;
   }
   &:after {
     content: '';
@@ -219,6 +219,10 @@
   }
   h1 {
     font-size: 48px;
+
+    @media screen and (max-width: $BP_MD) {
+      font-size: 36px;
+    }
   }
   &--description {
     margin-top: 40px;
