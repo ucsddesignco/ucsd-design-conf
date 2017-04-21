@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+$(document).ready(function() {
 
 	$(".scroll").click(function(event){
 		event.preventDefault();
@@ -6,8 +6,12 @@ $(document).ready(function($) {
 		$(this).animate({})
 	});
 
-	$(".mobile-link").click(function() {
+	$(".menu-button").click(function() {
+    $(".du-nav").toggleClass("nav-open");
 		console.log("YAAAA");
+  });
+
+	$(".du-nav--mobile-link").click(function() {
     $(".du-nav").toggleClass("nav-open");
   });
 });
