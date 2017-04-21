@@ -2,10 +2,10 @@
   position: relative;
   margin-top: 30px;
   padding-top: 30px;
-
+/*
   @media screen and (min-width: $BP_XXL) {
     padding-top: 300px;
-  }
+  }*/
   &--header {
     font-size: 42px;
     margin-bottom: 50px;
@@ -56,11 +56,11 @@
         top: -650px;
         left: -100px;
       }
+      /*
       @media screen and (min-width: $BP_XXL) {
         background-size: cover;
         height: 1200px;
-
-      }
+      }*/
     }
     &:after {
       background: inherit;
@@ -81,10 +81,11 @@
         top: 80%;
         background-position: 80% 60px;
       }
+      /*
       @media screen and (min-width: $BP_XXL) {
         background-size: cover;
         height: 1200px;
-      }
+      }*/
     }
   }
   &--blue {
@@ -93,11 +94,11 @@
     &:before {
       //background: url('../images/triangle_blue_top.png') no-repeat 0 0;
       background-size: initial;
-
+      /*
       @media screen and (min-width: $BP_XXL) {
         background-size: cover;
         height: 1200px;
-      }
+      }*/
     }
     &:after {
       //background: url('../images/triangle_blue_bottom_special.png') no-repeat 100% 0;
@@ -111,10 +112,11 @@
       @media screen and (max-width: $BP_MD) {
         //background: url('../images/triangle_blue_bottom_nothing.png') no-repeat 0 0;
       }
+      /*
       @media screen and (min-width: $BP_XXL) {
         background-size: cover;
         height: 1200px;
-      }
+      }*/
     }
   }
   &--red {
@@ -169,11 +171,12 @@
       @media screen and (max-width: $BP_MD) {
         background-position: 200px 0;
       }
+      /*
       @media screen and (min-width: $BP_XXL) {
         background-size: cover;
         height: $FOOTER_WIDTH * .605 * 1.2;
         width: $FOOTER_WIDTH * 1.2;
-      }
+      }*/
     }
     @media screen and (max-width: $BP_MD) {
       margin-top: 0;
@@ -223,9 +226,9 @@
     @media screen and (max-width: $BP_LG) {
       left: -100px;
     }
+
     @media screen and (min-width: $BP_XXL) {
-      background-size: cover;
-      height: 1200px;
+      height: 2000px;
     }
     @media screen and (max-width: $BP_MD) {
       top: -300px;
@@ -359,10 +362,10 @@
 
 .dc-cta {
   margin-top: 30px;
-
+  /*
   @media screen and (min-width: $BP_XXL) {
     margin-top: -100px !important;
-  }
+  }*/
 }
 
 .dc-footer {
