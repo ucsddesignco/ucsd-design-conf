@@ -1,7 +1,7 @@
 .dc-section {
   position: relative;
-  margin-top: 100px;
-  padding-top: 100px;
+  margin-top: 30px;
+  padding-top: 30px;
 
   @media screen and (min-width: $BP_XXL) {
     padding-top: 300px;
@@ -15,7 +15,6 @@
   }
   &--bottom {
     position: relative;
-    top: -100px;
   }
   &--bottom-bg {
     position: absolute;
@@ -39,7 +38,7 @@
       z-index: 1;
     }
     &:before {
-      background: url('../images/triangle_green_top.png') no-repeat 0 0;
+      //background: url('../images/triangle_green_top.png') no-repeat 0 0;
       background-size: initial;
       top: -600px;
       content: '';
@@ -70,7 +69,7 @@
       display: block;
       height: 100%;
       left: 0;
-      background: url('../images/triangle_green_bottom.png') no-repeat 100% 0;
+      //background: url('../images/triangle_green_bottom.png') no-repeat 100% 0;
       position: absolute;
       right: 0;
       z-index: -1;
@@ -92,7 +91,7 @@
     background: $BLUE_1;
 
     &:before {
-      background: url('../images/triangle_blue_top.png') no-repeat 0 0;
+      //background: url('../images/triangle_blue_top.png') no-repeat 0 0;
       background-size: initial;
 
       @media screen and (min-width: $BP_XXL) {
@@ -101,7 +100,7 @@
       }
     }
     &:after {
-      background: url('../images/triangle_blue_bottom_special.png') no-repeat 100% 0;
+      //background: url('../images/triangle_blue_bottom_special.png') no-repeat 100% 0;
       background-size: initial;
       height: 872px;
       top: 85%;
@@ -110,7 +109,7 @@
         background-position: -200px 0;
       }
       @media screen and (max-width: $BP_MD) {
-        background: url('../images/triangle_blue_bottom_nothing.png') no-repeat 0 0;
+        //background: url('../images/triangle_blue_bottom_nothing.png') no-repeat 0 0;
       }
       @media screen and (min-width: $BP_XXL) {
         background-size: cover;
@@ -128,11 +127,11 @@
     background: $YELLOW_1;
 
     &:before {
-      background: url('../images/triangle_yellow_top.png') no-repeat 0 0;
+      //background: url('../images/triangle_yellow_top.png') no-repeat 0 0;
       background-size: initial;
     }
     &:after {
-      background: url('../images/triangle_yellow_bottom.png') no-repeat 100% 0;
+      //background: url('../images/triangle_yellow_bottom.png') no-repeat 100% 0;
       background-size: initial;
       top: 60%;
     }
@@ -150,14 +149,15 @@
       content: none;
     }
   }
-  &--footer {
-    margin-top: 100px;
+  &--footer{
     position: relative;
+
+    background-color: $FOOTER;
 
     $FOOTER_WIDTH: 900px;
 
     &:before {
-      background: url('../images/triangle_yellow_footer.png') no-repeat 0 0;
+      //background: url('../images/triangle_yellow_footer.png') no-repeat 0 0;
       background-size: initial;
       position: absolute;
       bottom: 0;
@@ -183,6 +183,15 @@
   }
 }
 
+.dc-redfooter {
+  border-radius: 25px;
+  background: $FOOTER;
+}
+
+.dc-about {
+
+}
+
 .dc-hero {
   height: 80%;
   height: 80vh;
@@ -203,8 +212,9 @@
     top: -80px;
     left: 0;
     right: 0;
-    height: 996px;
-    background: url('../images/background.png') no-repeat 0 center;
+    height: 1700px;
+    background: url('../images/background1.png') no-repeat 0 center;
+    background-size: cover;
     z-index: -1;
 
     @media screen and (max-width: $BP_LG) {
@@ -250,6 +260,7 @@
     }
   }
 }
+
 
 .dc-card {
   border-radius: 25px;

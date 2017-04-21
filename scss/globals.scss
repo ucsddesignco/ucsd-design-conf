@@ -25,6 +25,9 @@
 
   $YELLOW_1: #FFD059;
 
+  $SALMON: #F69D94;
+
+  $FOOTER: #F05C4C;
 
   $PINK_SHADOW: rgba(0, 0, 0, .25);
 
@@ -38,7 +41,7 @@
   // Note breakpoints are the upper bound of each device size
   // Usage: @media screen and (max-width: $BP_WHATEVER) { }
 
-  /* Bootstrap 6 default breakpoints 
+  /* Bootstrap 6 default breakpoints
    * $breakpoints: (
    *   small: 0px,
    *   medium: 640px,
@@ -53,7 +56,7 @@
 
   // Mobile device width upper bound
   $BP_MD: 768px;
-  
+
   // Tablet width upper bound
   $BP_LG: 992px;
 
