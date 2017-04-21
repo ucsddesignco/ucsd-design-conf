@@ -20,8 +20,43 @@
 </head>
 <body>
   <div class="wrapper">
-    <nav class="nav dc-nav">
+
+    <nav class="du-nav">
+      <div class="container du-container">
+        <div class="du-nav--right hidden-sm hidden-xs">
+          <ul class="du-inline-list du-nav--links">
+            <a href="#about" class="scroll"><li>About</li></a>
+            <a href="#speakers" class="scroll"><li>Speakers</li></a>
+            <a href="#schedule" class="scroll"><li>Schedule</li></a>
+            <a href="#sponsors" class="scroll"><li>Sponsors</li></a>
+            <a href="#faqs" class="scroll"><li>FAQs</li></a>
+          </ul>
+        </div>
+        <a class="mobile-link hidden-lg hidden-md">
+          <span class="mobile-hamburger"></span>
+        </a>
+        <div class="navigation nav-right">
+          <ul>
+            <li>
+              <a class="du-nav--mobile-link" class="scroll" href="#about">About</a>
+            </li>
+            <li>
+              <a class="du-nav--mobile-link" class="scroll" href="#speakers">Speakers</a>
+            </li>
+            <li>
+              <a class="du-nav--mobile-link" class="scroll" href="#schedule">Schedule</a>
+            </li>
+            <li>
+              <a class="du-nav--mobile-link" class="scroll" href="#sponsors">Sponsors</a>
+            </li>
+            <li>
+              <a class="du-nav--mobile-link" class="scroll" href="#faqs">FAQs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
+
     <div class="section dc-section dc-hero">
       <div class="dc-hero--content-wrapper">
         <div class="container dc-hero--content">
@@ -35,7 +70,7 @@
                 <h4>UCSD Price Center Theater</h4>
               </div>
 
-              <a class="btn btn-primary dc-btn">Register Now</a>
+              <a class="btn btn-primary dc-btn" href="https://ucsddesignconf.eventbrite.com" target="_blank">Register Now</a>
             </div>
 
           </div>
@@ -43,7 +78,7 @@
       </div>
     </div>
 
-    <div class="section dc-section dc-about">
+    <div id="about" class="section dc-section dc-about">
       <div class="container">
         <div class="row text-center">
           <div class="dc-card--wrapper col-md-8 col-md-offset-2 dc-up">
@@ -55,7 +90,7 @@
       </div>
     </div>
 
-    <div class="section dc-section">
+    <div id="speakers" class="section dc-section">
       <div class="container">
         <div class="row text-center">
           <h2 class="dc-section--header">Speakers</h2>
@@ -63,7 +98,7 @@
 
         <div class="row text-center">
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/michael.png" />
               <div class="dc-card--body card-body">
                 <h3>Michael Meyer</h3>
@@ -76,7 +111,7 @@
           </div>
 
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/neema.jpg" />
               <div class="dc-card--body card-body">
                 <h3>Neema Mandavi</h3>
@@ -89,7 +124,7 @@
           </div>
 
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/nas.jpg" />
               <div class="dc-card--body card-body">
                 <h3>Nastasha Tan</h3>
@@ -102,7 +137,7 @@
           </div>
 
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/sharon.jpg" />
               <div class="dc-card--body card-body">
                 <h3>Sharon Charmichael</h3>
@@ -115,7 +150,7 @@
           </div>
 
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/oz.jpg" />
               <div class="dc-card--body card-body">
                 <h3>Oz Chen</h3>
@@ -128,7 +163,7 @@
           </div>
 
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/erwin.jpg" />
               <div class="dc-card--body card-body">
                 <h3>Erwin Hines</h3>
@@ -144,7 +179,7 @@
       </div>
     </div>
 
-    <div class="section dc-section">
+    <div id="schedule" class="section dc-section">
       <div class="container">
         <div class="dc-card--wrapper col-md-10 col-md-offset-1">
         <div class="dc-card">
@@ -233,17 +268,25 @@
   </div>
 </div>
 
-    <div class="section dc-section dc-section--white">
+    <div id="sponsors" class="section dc-section dc-section--white dc-sponsors">
       <div class="container">
         <div class="row text-center">
-          <h2 class="dc-section--header">Sponsor Us</h2>
+          <h2 class="dc-section--header">Sponsors</h2>
+        </div>
+
+        <div class="row dc-sponsors--logos text-center">
+          <div class="col-md-3 col-md-offset-3">
+            <img class="logo" src="images/rady_logo.png" />
+          </div>
+          <div class="col-md-3">
+            <img class="logo" src="images/designlab_logo.png" />
+          </div>
         </div>
 
         <div class="row text-center">
 
-
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/temporary.png" />
               <div class="dc-card--body card-body">
                 <h3>Engage</h3>
@@ -253,7 +296,7 @@
           </div>
 
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/network.png" />
               <div class="dc-card--body card-body">
                 <h3>Network</h3>
@@ -263,7 +306,7 @@
           </div>
 
           <div class="dc-card--wrapper col-md-4">
-            <div class="dc-card">
+            <div class="dc-card dc-card--min">
               <img class="dc-card--img" src="images/teach.png" />
               <div class="dc-card--body card-body">
                 <h3>Teach</h3>
@@ -282,12 +325,12 @@
     </div>
 
 
-    <div class="section dc-section dc-faq">
+    <div id="faqs" class="section dc-section dc-faq">
       <div class="container">
         <div class="dc-card--wrapper col-md-10 col-md-offset-1">
         <div class="dc-card">
         <div class="row text-center">
-          <h2 class="dc-section--header">FAQ</h2>
+          <h2 class="dc-section--header">FAQs</h2>
         </div>
 
         <div class="row dc-faq--table">
@@ -345,7 +388,7 @@
               <h4 class="text-white">UCSD Price Center Theater</h4>
             </div>
 
-            <a class="btn btn-primary dc-btn">Register Now</a>
+            <a class="btn btn-primary dc-btn" href="https://ucsddesignconf.eventbrite.com" target="_blank">Register Now</a>
           </div>
     </div>
 
@@ -382,6 +425,8 @@
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/nav.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
   <script>
     var YOUR_GA_CODE = 'UA-84330975-1';
 

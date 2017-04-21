@@ -284,6 +284,10 @@
       margin-bottom: 10px;
     }
   }
+
+ &--min {
+   min-height: 400px;
+ }
 }
 
 .dc-schedule {
@@ -370,6 +374,18 @@
   }
   &--presented h4 {
     margin-bottom: 20px;
+  }
+}
+
+.dc-sponsors {
+  display: flex;
+
+  .logo {
+    width: 200px;
+  }
+
+  &--logos {
+    margin-bottom: 30px;
   }
 }
 
