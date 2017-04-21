@@ -6,4 +6,8 @@ $(document).ready(function($) {
 		$(this).animate({})
 	});
 
+	$(".mobile-link").click(function() {
+		console.log("YAAAA");
+    $(".du-nav").toggleClass("nav-open");
+  });
 });

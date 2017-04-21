@@ -152,8 +152,6 @@
   &--footer{
     position: relative;
 
-    background-color: $FOOTER;
-
     $FOOTER_WIDTH: 900px;
 
     &:before {
@@ -184,7 +182,7 @@
 }
 
 .dc-redfooter {
-  border-radius: 25px;
+  border-radius: 25px 25px 0px 0px;
   background: $FOOTER;
 
   .text-white {
