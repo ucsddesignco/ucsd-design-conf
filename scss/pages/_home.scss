@@ -186,6 +186,10 @@
 .dc-redfooter {
   border-radius: 25px;
   background: $FOOTER;
+
+  .text-white {
+    color: white;
+  }
 }
 
 .dc-about {
@@ -343,7 +347,7 @@
 }
 
 .dc-cta {
-  margin-top: 100px;
+  margin-top: 30px;
 
   @media screen and (min-width: $BP_XXL) {
     margin-top: -100px !important;
@@ -356,9 +360,8 @@
   padding-bottom: 40px;
 
   #logo-dsp {
-    width: 100px;
     vertical-align: middle;
-    height: 100px;
+    height: 80px;
   }
   #logo-designatucsd {
     vertical-align: middle;
@@ -402,7 +405,7 @@
 
     li {
       display: inline-block;
-      border: 3px solid $GRAY_1;
+      border: 3px solid white;
       border-radius: 24px;
       margin-left: 6px;
 
