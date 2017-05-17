@@ -455,7 +455,11 @@
 }
 
 .dc-breakout {
-  
+
+  .bottom {
+    margin-right: 20px;
+  }
+
   .dc-divider {
     background: $SALMON;
     height: 10px;
